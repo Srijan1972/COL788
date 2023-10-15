@@ -1,0 +1,13 @@
+../X-CUBE-AI/App/audio_model.c:703:9:audio_model_configure_activations	2
+../X-CUBE-AI/App/audio_model.c:775:9:audio_model_configure_weights	2
+../X-CUBE-AI/App/audio_model.c:827:9:ai_audio_model_get_info	4
+../X-CUBE-AI/App/audio_model.c:873:9:ai_audio_model_get_report	4
+../X-CUBE-AI/App/audio_model.c:919:10:ai_audio_model_get_error	1
+../X-CUBE-AI/App/audio_model.c:925:10:ai_audio_model_create	1
+../X-CUBE-AI/App/audio_model.c:935:10:ai_audio_model_create_and_init	8
+../X-CUBE-AI/App/audio_model.c:969:12:ai_audio_model_inputs_get	2
+../X-CUBE-AI/App/audio_model.c:979:12:ai_audio_model_outputs_get	2
+../X-CUBE-AI/App/audio_model.c:989:11:ai_audio_model_destroy	1
+../X-CUBE-AI/App/audio_model.c:995:9:ai_audio_model_init	2
+../X-CUBE-AI/App/audio_model.c:1012:8:ai_audio_model_run	1
+../X-CUBE-AI/App/audio_model.c:1019:8:ai_audio_model_forward	1

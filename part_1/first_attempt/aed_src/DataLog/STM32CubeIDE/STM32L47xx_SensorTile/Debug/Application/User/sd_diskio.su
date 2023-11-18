@@ -1,0 +1,5 @@
+/home/pranay/iitd/sem7/col788/STSW-STLKT01_V2.5.0/Projects/SensorTile/Applications/DataLog/Src/sd_diskio.c:91:9:SD_initialize	8	static
+/home/pranay/iitd/sem7/col788/STSW-STLKT01_V2.5.0/Projects/SensorTile/Applications/DataLog/Src/sd_diskio.c:109:9:SD_status	8	static
+/home/pranay/iitd/sem7/col788/STSW-STLKT01_V2.5.0/Projects/SensorTile/Applications/DataLog/Src/sd_diskio.c:160:9:SD_write	16	static
+/home/pranay/iitd/sem7/col788/STSW-STLKT01_V2.5.0/Projects/SensorTile/Applications/DataLog/Src/sd_diskio.c:191:9:SD_ioctl	104	static
+/home/pranay/iitd/sem7/col788/STSW-STLKT01_V2.5.0/Projects/SensorTile/Applications/DataLog/Src/sd_diskio.c:129:9:SD_read	16	static

@@ -1,0 +1,517 @@
+
+<html>
+<head>
+<style>
+body {font-family: sans-serif; background-color: #fa0;}
+table {background-color: #eca;}
+th {background-color: black; color: white;}
+h1 {
+  background-color: ffaa00;
+  padding:5px;
+  color: black;
+}
+
+svg {
+  margin: 10px;
+  border: 2px;
+  border-style: solid;
+  border-color: black;
+  background: white;
+}
+
+div {
+  border-radius: 5px;
+  background-color: #fec;
+  padding:5px;
+  margin:5px;
+}
+
+.tooltip {color: blue;}
+.tooltip .tooltipcontent  {
+    visibility: hidden;
+    color: black;
+    background-color: yellow;
+    padding: 5px;
+    border-radius: 4px;
+    position: absolute;
+    z-index: 1;
+}
+.tooltip:hover .tooltipcontent {
+    visibility: visible;
+}
+
+.edges line {
+  stroke: #333;
+}
+
+text {
+  font-weight: bold;
+}
+
+.nodes text {
+  color: black;
+  pointer-events: none;
+  font-family: sans-serif;
+  font-size: 11px;
+}
+</style>
+
+<script src="https://d3js.org/d3.v4.min.js"></script>
+
+</head>
+<body>
+<h1>TensorFlow Lite Model</h2><table>
+<tr><th>filename</th><td>custom_quantized_model.tflite</td></tr>
+<tr><th>version</th><td>3</td></tr>
+<tr><th>description</th><td>[77, 76, 73, 82, 32, 67, 111, 110, 118, 101, 114, 116, 101, 100, 46]</td></tr>
+</table>
+<div class='subgraph'><h2>Subgraph 0</h2>
+<h3>Inputs/Outputs</h3>
+<table><tr>
+<tr>
+<th>inputs</th><th>outputs</th></tr>
+<tr>
+<td><span class='tooltip'><span class='tooltipcontent'>0 serving_default_input_1:0 INT8 [1, 64, 96, 1][-1, 64, 96, 1]<br></span>[0]</span></td>
+<td><span class='tooltip'><span class='tooltipcontent'>19 StatefulPartitionedCall:0 FLOAT32 [1, 10][-1, 10]<br></span>[19]</span></td>
+</tr>
+</table>
+<h3>Tensors</h3>
+<table><tr>
+<tr>
+<th>index</th><th>name</th><th>type</th><th>shape</th><th>shape_signature</th><th>buffer</th><th>quantization</th></tr>
+<tr>
+<td>0</td><td>serving_default_input_1:0</td>
+<td>INT8</td>
+<td>[1, 64, 96, 1]</td>
+<td>[-1, 64, 96, 1]</td>
+<td>1</td>
+<td>{'details': None, 'details_type': 0, 'max': None, 'min': None, 'quantized_dimension': 0, 'scale': [0.05692856386303902], 'zero_point': [34]}</td>
+</tr>
+<tr>
+<td>1</td><td>custom_model/global_average_pooling2d/Mean/reduction_indices</td>
+<td>INT32</td>
+<td>[2]</td>
+<td>None</td>
+<td>2</td>
+<td>{'details': None, 'details_type': 0, 'max': None, 'min': None, 'quantized_dimension': 0, 'scale': None, 'zero_point': None}</td>
+</tr>
+<tr>
+<td>2</td><td>custom_model/dense/BiasAdd/ReadVariableOp</td>
+<td>INT32</td>
+<td>[10]</td>
+<td>None</td>
+<td>3</td>
+<td>{'details': None, 'details_type': 0, 'max': None, 'min': None, 'quantized_dimension': 0, 'scale': [0.0002115147071890533], 'zero_point': [0]}</td>
+</tr>
+<tr>
+<td>3</td><td>custom_model/dense/MatMul</td>
+<td>INT8</td>
+<td>[10, 64]</td>
+<td>None</td>
+<td>4</td>
+<td>{'details': None, 'details_type': 0, 'max': None, 'min': None, 'quantized_dimension': 0, 'scale': [0.008536478504538536], 'zero_point': [0]}</td>
+</tr>
+<tr>
+<td>4</td><td>custom_model/batch_normalization_2/FusedBatchNormV3</td>
+<td>INT32</td>
+<td>[64]</td>
+<td>None</td>
+<td>5</td>
+<td>{'details': None, 'details_type': 0, 'max': None, 'min': None, 'quantized_dimension': 0, 'scale': [6.836820102762431e-05, 7.757705316180363e-05, 8.42021981952712e-05, 9.104367200052366e-05, 7.056870526866987e-05, 8.488041203236207e-05, 6.518205918837339e-05, 8.057453669607639e-05, 5.7345328968949616e-05, 6.263961404329166e-05, 6.8620742240455e-05, 9.745807619765401e-05, 8.484506543027237e-05, 7.63963907957077e-05, 0.00013423470954876393, 7.522290252381936e-05, 6.753921479685232e-05, 6.775968358851969e-05, 7.092650048434734e-05, 7.13654444552958e-05, 6.892296369187534e-05, 6.763226701878011e-05, 6.918025610502809e-05, 4.472765795071609e-05, 0.00012259538925718516, 7.642147829756141e-05, 7.744630420347676e-05, 8.84740729816258e-05, 5.6441203923895955e-05, 9.171792771667242e-05, 0.00010867737728403881, 0.00010777032002806664, 8.800550858723e-05, 8.699472527951002e-05, 7.873989670770243e-05, 7.99365880084224e-05, 6.340830441331491e-05, 7.509098941227421e-05, 7.381194154731929e-05, 6.554047286044806e-05, 8.810283907223493e-05, 4.7496389015577734e-05, 7.911543070804328e-05, 0.00015264908142853528, 6.94075642968528e-05, 7.064644159981981e-05, 8.847840217640623e-05, 6.96199422236532e-05, 7.592338806716725e-05, 8.969636110123247e-05, 0.00010004745854530483, 7.472540892194957e-05, 5.6093893363140523e-05, 5.360853538149968e-05, 7.667096360819414e-05, 7.085510151227936e-05, 7.717112748650834e-05, 6.537095759995282e-05, 9.295455674873665e-05, 0.00010272696090396494, 9.60011821007356e-05, 9.54376082518138e-05, 9.370438056066632e-05, 4.427040403243154e-05], 'zero_point': [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0]}</td>
+</tr>
+<tr>
+<td>5</td><td>custom_model/conv2d_2/Conv2D</td>
+<td>INT8</td>
+<td>[64, 3, 3, 32]</td>
+<td>None</td>
+<td>6</td>
+<td>{'details': None, 'details_type': 0, 'max': None, 'min': None, 'quantized_dimension': 0, 'scale': [0.0016182245453819633, 0.001836191164329648, 0.001993003534153104, 0.002154936082661152, 0.0016703087603673339, 0.0020090562757104635, 0.0015428109327331185, 0.0019071393180638552, 0.001357321278192103, 0.001482633058913052, 0.001624202006496489, 0.002306760288774967, 0.002008219715207815, 0.0018082457827404141, 0.003177235834300518, 0.0017804702511057258, 0.001598602975718677, 0.0016038212925195694, 0.001678777625784278, 0.0016891669947654009, 0.0016313552623614669, 0.0016008054371923208, 0.0016374451806768775, 0.0010586704593151808, 0.0029017417691648006, 0.0018088396172970533, 0.0018330964958295226, 0.0020941155962646008, 0.0013359213480725884, 0.0021708952262997627, 0.002572312718257308, 0.0025508434046059847, 0.0020830249413847923, 0.002059100428596139, 0.0018637148896232247, 0.0018920396687462926, 0.001500827493146062, 0.0017773479921743274, 0.0017470738384872675, 0.001551294350065291, 0.0020853288006037474, 0.001124204252846539, 0.0018726034322753549, 0.0036130903754383326, 0.001642825547605753, 0.0016721487045288086, 0.0020942180417478085, 0.0016478522447869182, 0.0017970502376556396, 0.002123046200722456, 0.0023680489975959063, 0.0017686948413029313, 0.0013277007965371013, 0.00126887415535748, 0.0018147447844967246, 0.0016770876245573163, 0.0018265832914039493, 0.0015472819795832038, 0.0022001652978360653, 0.002431470900774002, 0.002272276673465967, 0.0022589373402297497, 0.002217913046479225, 0.0010478475596755743], 'zero_point': [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0]}</td>
+</tr>
+<tr>
+<td>6</td><td>custom_model/batch_normalization_1/FusedBatchNormV3</td>
+<td>INT32</td>
+<td>[32]</td>
+<td>None</td>
+<td>7</td>
+<td>{'details': None, 'details_type': 0, 'max': None, 'min': None, 'quantized_dimension': 0, 'scale': [8.32166479085572e-05, 5.293527647154406e-05, 9.851581853581592e-05, 0.00012112851982237771, 9.985476935980842e-05, 0.0001270020002266392, 9.722972754389048e-05, 9.033471724251285e-05, 8.408966823481023e-05, 8.188042556867003e-05, 0.00013007732923142612, 4.525997428572737e-05, 5.574499300564639e-05, 0.00011267833906458691, 7.000522600719705e-05, 0.00010028470569523051, 9.299870725953951e-05, 7.922510849311948e-05, 5.544346640817821e-05, 3.211929652024992e-05, 8.01763599156402e-05, 0.0001270940701942891, 0.0001273670350201428, 8.060127584030852e-05, 8.803420496406034e-05, 4.112875467399135e-05, 0.00012171410344308242, 9.860576392384246e-05, 0.0001287678605876863, 0.00011425887350924313, 0.00014398041821550578, 7.520899089286104e-05], 'zero_point': [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0]}</td>
+</tr>
+<tr>
+<td>7</td><td>custom_model/conv2d_1/Conv2D</td>
+<td>INT8</td>
+<td>[32, 3, 3, 16]</td>
+<td>None</td>
+<td>8</td>
+<td>{'details': None, 'details_type': 0, 'max': None, 'min': None, 'quantized_dimension': 0, 'scale': [0.0015425594756379724, 0.0009812436765059829, 0.0018261551158502698, 0.0022453193087130785, 0.0018509748624637723, 0.0023541939444839954, 0.0018023152370005846, 0.001674504717811942, 0.0015587423695251346, 0.0015177903696894646, 0.0024112004321068525, 0.0008389691356569529, 0.0010333264945074916, 0.0020886810962110758, 0.001297663664445281, 0.0018589444225654006, 0.0017238862346857786, 0.001468569622375071, 0.0010277371620759368, 0.000595384743064642, 0.0014862027019262314, 0.002355900825932622, 0.002360960701480508, 0.0014940791297703981, 0.001631860970519483, 0.0007623901474289596, 0.0022561741061508656, 0.0018278224160894752, 0.0023869271390140057, 0.002117978874593973, 0.0026689174119383097, 0.0013941241195425391], 'zero_point': [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0]}</td>
+</tr>
+<tr>
+<td>8</td><td>custom_model/batch_normalization/FusedBatchNormV3</td>
+<td>INT32</td>
+<td>[16]</td>
+<td>None</td>
+<td>9</td>
+<td>{'details': None, 'details_type': 0, 'max': None, 'min': None, 'quantized_dimension': 0, 'scale': [5.760623389505781e-05, 0.00026842750958167017, 6.198766641318798e-05, 6.877366831758991e-05, 0.0003254548937547952, 0.0003116574662271887, 0.00020851161389146, 0.0002919569087680429, 0.00040211243322119117, 8.943716966314241e-05, 0.0003773061325773597, 0.00023050469462759793, 0.00013676185335498303, 7.795493729645386e-05, 0.00037557980976998806, 0.00020800721540581435], 'zero_point': [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0]}</td>
+</tr>
+<tr>
+<td>9</td><td>custom_model/conv2d/Conv2D</td>
+<td>INT8</td>
+<td>[16, 3, 3, 1]</td>
+<td>None</td>
+<td>10</td>
+<td>{'details': None, 'details_type': 0, 'max': None, 'min': None, 'quantized_dimension': 0, 'scale': [0.0010119038634002209, 0.004715163726359606, 0.0010888675460591912, 0.0012080696178600192, 0.005716899875551462, 0.005474535748362541, 0.0036626888904720545, 0.00512847863137722, 0.00706345634534955, 0.0015710421139374375, 0.006627711933106184, 0.0040490166284143925, 0.0024023414589464664, 0.0013693466316908598, 0.006597387604415417, 0.0036538285203278065], 'zero_point': [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0]}</td>
+</tr>
+<tr>
+<td>10</td><td>custom_model/activation/Relu;custom_model/batch_normalization/FusedBatchNormV3;custom_model/conv2d/Conv2D</td>
+<td>INT8</td>
+<td>[1, 64, 96, 16]</td>
+<td>[-1, 64, 96, 16]</td>
+<td>11</td>
+<td>{'details': None, 'details_type': 0, 'max': None, 'min': None, 'quantized_dimension': 0, 'scale': [0.053947124630212784], 'zero_point': [-128]}</td>
+</tr>
+<tr>
+<td>11</td><td>custom_model/max_pooling2d/MaxPool</td>
+<td>INT8</td>
+<td>[1, 32, 48, 16]</td>
+<td>[-1, 32, 48, 16]</td>
+<td>12</td>
+<td>{'details': None, 'details_type': 0, 'max': None, 'min': None, 'quantized_dimension': 0, 'scale': [0.053947124630212784], 'zero_point': [-128]}</td>
+</tr>
+<tr>
+<td>12</td><td>custom_model/activation_1/Relu;custom_model/batch_normalization_1/FusedBatchNormV3;custom_model/conv2d_1/Conv2D</td>
+<td>INT8</td>
+<td>[1, 32, 48, 32]</td>
+<td>[-1, 32, 48, 32]</td>
+<td>13</td>
+<td>{'details': None, 'details_type': 0, 'max': None, 'min': None, 'quantized_dimension': 0, 'scale': [0.04224889725446701], 'zero_point': [-128]}</td>
+</tr>
+<tr>
+<td>13</td><td>custom_model/max_pooling2d_1/MaxPool</td>
+<td>INT8</td>
+<td>[1, 16, 24, 32]</td>
+<td>[-1, 16, 24, 32]</td>
+<td>14</td>
+<td>{'details': None, 'details_type': 0, 'max': None, 'min': None, 'quantized_dimension': 0, 'scale': [0.04224889725446701], 'zero_point': [-128]}</td>
+</tr>
+<tr>
+<td>14</td><td>custom_model/activation_2/Relu;custom_model/batch_normalization_2/FusedBatchNormV3;custom_model/conv2d_2/Conv2D</td>
+<td>INT8</td>
+<td>[1, 8, 12, 64]</td>
+<td>[-1, 8, 12, 64]</td>
+<td>15</td>
+<td>{'details': None, 'details_type': 0, 'max': None, 'min': None, 'quantized_dimension': 0, 'scale': [0.04661387950181961], 'zero_point': [-128]}</td>
+</tr>
+<tr>
+<td>15</td><td>custom_model/max_pooling2d_2/MaxPool</td>
+<td>INT8</td>
+<td>[1, 4, 6, 64]</td>
+<td>[-1, 4, 6, 64]</td>
+<td>16</td>
+<td>{'details': None, 'details_type': 0, 'max': None, 'min': None, 'quantized_dimension': 0, 'scale': [0.04661387950181961], 'zero_point': [-128]}</td>
+</tr>
+<tr>
+<td>16</td><td>custom_model/global_average_pooling2d/Mean</td>
+<td>INT8</td>
+<td>[1, 64]</td>
+<td>[-1, 64]</td>
+<td>17</td>
+<td>{'details': None, 'details_type': 0, 'max': None, 'min': None, 'quantized_dimension': 0, 'scale': [0.024777747690677643], 'zero_point': [-128]}</td>
+</tr>
+<tr>
+<td>17</td><td>custom_model/dense/MatMul;custom_model/dense/BiasAdd</td>
+<td>INT8</td>
+<td>[1, 10]</td>
+<td>[-1, 10]</td>
+<td>18</td>
+<td>{'details': None, 'details_type': 0, 'max': None, 'min': None, 'quantized_dimension': 0, 'scale': [0.12484996020793915], 'zero_point': [15]}</td>
+</tr>
+<tr>
+<td>18</td><td>StatefulPartitionedCall:01</td>
+<td>INT8</td>
+<td>[1, 10]</td>
+<td>[-1, 10]</td>
+<td>19</td>
+<td>{'details': None, 'details_type': 0, 'max': None, 'min': None, 'quantized_dimension': 0, 'scale': [0.00390625], 'zero_point': [-128]}</td>
+</tr>
+<tr>
+<td>19</td><td>StatefulPartitionedCall:0</td>
+<td>FLOAT32</td>
+<td>[1, 10]</td>
+<td>[-1, 10]</td>
+<td>20</td>
+<td>{'details': None, 'details_type': 0, 'max': None, 'min': None, 'quantized_dimension': 0, 'scale': None, 'zero_point': None}</td>
+</tr>
+</table>
+<h3>Ops</h3>
+<table><tr>
+<tr>
+<th>index</th><th>inputs</th><th>outputs</th><th>builtin_options</th><th>opcode_index</th></tr>
+<tr>
+<td>0</td><td><span class='tooltip'><span class='tooltipcontent'>0 serving_default_input_1:0 INT8 [1, 64, 96, 1][-1, 64, 96, 1]<br>9 custom_model/conv2d/Conv2D INT8 [16, 3, 3, 1]None<br>8 custom_model/batch_normalization/FusedBatchNormV3 INT32 [16]None<br></span>[0, 9, 8]</span></td>
+<td><span class='tooltip'><span class='tooltipcontent'>10 custom_model/activation/Relu;custom_model/batch_normalization/FusedBatchNormV3;custom_model/conv2d/Conv2D INT8 [1, 64, 96, 16][-1, 64, 96, 16]<br></span>[10]</span></td>
+<td>{'dilation_h_factor': 1, 'dilation_w_factor': 1, 'fused_activation_function': 1, 'padding': 0, 'stride_h': 1, 'stride_w': 1}</td>
+<td>CONV_2D (0)</td>
+</tr>
+<tr>
+<td>1</td><td><span class='tooltip'><span class='tooltipcontent'>10 custom_model/activation/Relu;custom_model/batch_normalization/FusedBatchNormV3;custom_model/conv2d/Conv2D INT8 [1, 64, 96, 16][-1, 64, 96, 16]<br></span>[10]</span></td>
+<td><span class='tooltip'><span class='tooltipcontent'>11 custom_model/max_pooling2d/MaxPool INT8 [1, 32, 48, 16][-1, 32, 48, 16]<br></span>[11]</span></td>
+<td>{'filter_height': 2, 'filter_width': 2, 'fused_activation_function': 0, 'padding': 1, 'stride_h': 2, 'stride_w': 2}</td>
+<td>MAX_POOL_2D (1)</td>
+</tr>
+<tr>
+<td>2</td><td><span class='tooltip'><span class='tooltipcontent'>11 custom_model/max_pooling2d/MaxPool INT8 [1, 32, 48, 16][-1, 32, 48, 16]<br>7 custom_model/conv2d_1/Conv2D INT8 [32, 3, 3, 16]None<br>6 custom_model/batch_normalization_1/FusedBatchNormV3 INT32 [32]None<br></span>[11, 7, 6]</span></td>
+<td><span class='tooltip'><span class='tooltipcontent'>12 custom_model/activation_1/Relu;custom_model/batch_normalization_1/FusedBatchNormV3;custom_model/conv2d_1/Conv2D INT8 [1, 32, 48, 32][-1, 32, 48, 32]<br></span>[12]</span></td>
+<td>{'dilation_h_factor': 1, 'dilation_w_factor': 1, 'fused_activation_function': 1, 'padding': 0, 'stride_h': 1, 'stride_w': 1}</td>
+<td>CONV_2D (0)</td>
+</tr>
+<tr>
+<td>3</td><td><span class='tooltip'><span class='tooltipcontent'>12 custom_model/activation_1/Relu;custom_model/batch_normalization_1/FusedBatchNormV3;custom_model/conv2d_1/Conv2D INT8 [1, 32, 48, 32][-1, 32, 48, 32]<br></span>[12]</span></td>
+<td><span class='tooltip'><span class='tooltipcontent'>13 custom_model/max_pooling2d_1/MaxPool INT8 [1, 16, 24, 32][-1, 16, 24, 32]<br></span>[13]</span></td>
+<td>{'filter_height': 2, 'filter_width': 2, 'fused_activation_function': 0, 'padding': 1, 'stride_h': 2, 'stride_w': 2}</td>
+<td>MAX_POOL_2D (1)</td>
+</tr>
+<tr>
+<td>4</td><td><span class='tooltip'><span class='tooltipcontent'>13 custom_model/max_pooling2d_1/MaxPool INT8 [1, 16, 24, 32][-1, 16, 24, 32]<br>5 custom_model/conv2d_2/Conv2D INT8 [64, 3, 3, 32]None<br>4 custom_model/batch_normalization_2/FusedBatchNormV3 INT32 [64]None<br></span>[13, 5, 4]</span></td>
+<td><span class='tooltip'><span class='tooltipcontent'>14 custom_model/activation_2/Relu;custom_model/batch_normalization_2/FusedBatchNormV3;custom_model/conv2d_2/Conv2D INT8 [1, 8, 12, 64][-1, 8, 12, 64]<br></span>[14]</span></td>
+<td>{'dilation_h_factor': 1, 'dilation_w_factor': 1, 'fused_activation_function': 1, 'padding': 0, 'stride_h': 2, 'stride_w': 2}</td>
+<td>CONV_2D (0)</td>
+</tr>
+<tr>
+<td>5</td><td><span class='tooltip'><span class='tooltipcontent'>14 custom_model/activation_2/Relu;custom_model/batch_normalization_2/FusedBatchNormV3;custom_model/conv2d_2/Conv2D INT8 [1, 8, 12, 64][-1, 8, 12, 64]<br></span>[14]</span></td>
+<td><span class='tooltip'><span class='tooltipcontent'>15 custom_model/max_pooling2d_2/MaxPool INT8 [1, 4, 6, 64][-1, 4, 6, 64]<br></span>[15]</span></td>
+<td>{'filter_height': 2, 'filter_width': 2, 'fused_activation_function': 0, 'padding': 1, 'stride_h': 2, 'stride_w': 2}</td>
+<td>MAX_POOL_2D (1)</td>
+</tr>
+<tr>
+<td>6</td><td><span class='tooltip'><span class='tooltipcontent'>15 custom_model/max_pooling2d_2/MaxPool INT8 [1, 4, 6, 64][-1, 4, 6, 64]<br>1 custom_model/global_average_pooling2d/Mean/reduction_indices INT32 [2]None<br></span>[15, 1]</span></td>
+<td><span class='tooltip'><span class='tooltipcontent'>16 custom_model/global_average_pooling2d/Mean INT8 [1, 64][-1, 64]<br></span>[16]</span></td>
+<td>{'keep_dims': False}</td>
+<td>MEAN (2)</td>
+</tr>
+<tr>
+<td>7</td><td><span class='tooltip'><span class='tooltipcontent'>16 custom_model/global_average_pooling2d/Mean INT8 [1, 64][-1, 64]<br>3 custom_model/dense/MatMul INT8 [10, 64]None<br>2 custom_model/dense/BiasAdd/ReadVariableOp INT32 [10]None<br></span>[16, 3, 2]</span></td>
+<td><span class='tooltip'><span class='tooltipcontent'>17 custom_model/dense/MatMul;custom_model/dense/BiasAdd INT8 [1, 10][-1, 10]<br></span>[17]</span></td>
+<td>{'asymmetric_quantize_inputs': False, 'fused_activation_function': 0, 'keep_num_dims': False, 'weights_format': 0}</td>
+<td>FULLY_CONNECTED (3)</td>
+</tr>
+<tr>
+<td>8</td><td><span class='tooltip'><span class='tooltipcontent'>17 custom_model/dense/MatMul;custom_model/dense/BiasAdd INT8 [1, 10][-1, 10]<br></span>[17]</span></td>
+<td><span class='tooltip'><span class='tooltipcontent'>18 StatefulPartitionedCall:01 INT8 [1, 10][-1, 10]<br></span>[18]</span></td>
+<td>{'beta': 1.0}</td>
+<td>SOFTMAX (4)</td>
+</tr>
+<tr>
+<td>9</td><td><span class='tooltip'><span class='tooltipcontent'>18 StatefulPartitionedCall:01 INT8 [1, 10][-1, 10]<br></span>[18]</span></td>
+<td><span class='tooltip'><span class='tooltipcontent'>19 StatefulPartitionedCall:0 FLOAT32 [1, 10][-1, 10]<br></span>[19]</span></td>
+<td>None</td>
+<td>DEQUANTIZE (5)</td>
+</tr>
+</table>
+<svg id='subgraph0' width='1600' height='900'></svg>
+
+  <script>
+    function buildGraph() {
+      // Build graph data
+      var graph = {"nodes": [{"id": "o0", "name": "CONV_2D (0)", "group": 2, "x": 200, "y": 200}, {"id": "o1", "name": "MAX_POOL_2D (1)", "group": 2, "x": 200, "y": 400}, {"id": "o2", "name": "CONV_2D (0)", "group": 2, "x": 200, "y": 600}, {"id": "o3", "name": "MAX_POOL_2D (1)", "group": 2, "x": 200, "y": 800}, {"id": "o4", "name": "CONV_2D (0)", "group": 2, "x": 200, "y": 1000}, {"id": "o5", "name": "MAX_POOL_2D (1)", "group": 2, "x": 200, "y": 1200}, {"id": "o6", "name": "MEAN (2)", "group": 2, "x": 200, "y": 1400}, {"id": "o7", "name": "FULLY_CONNECTED (3)", "group": 2, "x": 200, "y": 1600}, {"id": "o8", "name": "SOFTMAX (4)", "group": 2, "x": 200, "y": 1800}, {"id": "o9", "name": "DEQUANTIZE (5)", "group": 2, "x": 200, "y": 2000}, {"id": "t0", "name": "[] (0)", "group": 1, "x": 170, "y": 100.0}, {"id": "t1", "name": "[] (1)", "group": 1, "x": 340, "y": 1300.0}, {"id": "t2", "name": "[] (2)", "group": 1, "x": 510, "y": 1500.0}, {"id": "t3", "name": "[] (3)", "group": 1, "x": 340, "y": 1500.0}, {"id": "t4", "name": "[] (4)", "group": 1, "x": 510, "y": 900.0}, {"id": "t5", "name": "[] (5)", "group": 1, "x": 340, "y": 900.0}, {"id": "t6", "name": "[] (6)", "group": 1, "x": 510, "y": 500.0}, {"id": "t7", "name": "[] (7)", "group": 1, "x": 340, "y": 500.0}, {"id": "t8", "name": "[] (8)", "group": 1, "x": 510, "y": 100.0}, {"id": "t9", "name": "[] (9)", "group": 1, "x": 340, "y": 100.0}, {"id": "t10", "name": "[] (10)", "group": 1, "x": 170, "y": 300.0}, {"id": "t11", "name": "[] (11)", "group": 1, "x": 170, "y": 500.0}, {"id": "t12", "name": "[] (12)", "group": 1, "x": 170, "y": 700.0}, {"id": "t13", "name": "[] (13)", "group": 1, "x": 170, "y": 900.0}, {"id": "t14", "name": "[] (14)", "group": 1, "x": 170, "y": 1100.0}, {"id": "t15", "name": "[] (15)", "group": 1, "x": 170, "y": 1300.0}, {"id": "t16", "name": "[] (16)", "group": 1, "x": 170, "y": 1500.0}, {"id": "t17", "name": "[] (17)", "group": 1, "x": 170, "y": 1700.0}, {"id": "t18", "name": "[] (18)", "group": 1, "x": 170, "y": 1900.0}, {"id": "t19", "name": "[] (19)", "group": 1, "x": 170, "y": 2100.0}], "edges": [{"source": "t0", "target": "o0"}, {"source": "t9", "target": "o0"}, {"source": "t8", "target": "o0"}, {"target": "t10", "source": "o0"}, {"source": "t10", "target": "o1"}, {"target": "t11", "source": "o1"}, {"source": "t11", "target": "o2"}, {"source": "t7", "target": "o2"}, {"source": "t6", "target": "o2"}, {"target": "t12", "source": "o2"}, {"source": "t12", "target": "o3"}, {"target": "t13", "source": "o3"}, {"source": "t13", "target": "o4"}, {"source": "t5", "target": "o4"}, {"source": "t4", "target": "o4"}, {"target": "t14", "source": "o4"}, {"source": "t14", "target": "o5"}, {"target": "t15", "source": "o5"}, {"source": "t15", "target": "o6"}, {"source": "t1", "target": "o6"}, {"target": "t16", "source": "o6"}, {"source": "t16", "target": "o7"}, {"source": "t3", "target": "o7"}, {"source": "t2", "target": "o7"}, {"target": "t17", "source": "o7"}, {"source": "t17", "target": "o8"}, {"target": "t18", "source": "o8"}, {"source": "t18", "target": "o9"}, {"target": "t19", "source": "o9"}]};
+
+      var svg = d3.select("#subgraph0")
+      var width = svg.attr("width");
+      var height = svg.attr("height");
+      // Make the graph scrollable.
+      svg = svg.call(d3.zoom().on("zoom", function() {
+        svg.attr("transform", d3.event.transform);
+      })).append("g");
+
+
+      var color = d3.scaleOrdinal(d3.schemeDark2);
+
+      var simulation = d3.forceSimulation()
+          .force("link", d3.forceLink().id(function(d) {return d.id;}))
+          .force("charge", d3.forceManyBody())
+          .force("center", d3.forceCenter(0.5 * width, 0.5 * height));
+
+      var edge = svg.append("g").attr("class", "edges").selectAll("line")
+        .data(graph.edges).enter().append("path").attr("stroke","black").attr("fill","none")
+
+      // Make the node group
+      var node = svg.selectAll(".nodes")
+        .data(graph.nodes)
+        .enter().append("g")
+        .attr("x", function(d){return d.x})
+        .attr("y", function(d){return d.y})
+        .attr("transform", function(d) {
+          return "translate( " + d.x + ", " + d.y + ")"
+        })
+        .attr("class", "nodes")
+          .call(d3.drag()
+              .on("start", function(d) {
+                if(!d3.event.active) simulation.alphaTarget(1.0).restart();
+                d.fx = d.x;d.fy = d.y;
+              })
+              .on("drag", function(d) {
+                d.fx = d3.event.x; d.fy = d3.event.y;
+              })
+              .on("end", function(d) {
+                if (!d3.event.active) simulation.alphaTarget(0);
+                d.fx = d.fy = null;
+              }));
+      // Within the group, draw a box for the node position and text
+      // on the side.
+
+      var node_width = 150;
+      var node_height = 30;
+
+      node.append("rect")
+          .attr("r", "5px")
+          .attr("width", node_width)
+          .attr("height", node_height)
+          .attr("rx", function(d) { return d.group == 1 ? 1 : 10; })
+          .attr("stroke", "#000000")
+          .attr("fill", function(d) { return d.group == 1 ? "#dddddd" : "#000000"; })
+      node.append("text")
+          .text(function(d) { return d.name; })
+          .attr("x", 5)
+          .attr("y", 20)
+          .attr("fill", function(d) { return d.group == 1 ? "#000000" : "#eeeeee"; })
+      // Setup force parameters and update position callback
+
+
+      var node = svg.selectAll(".nodes")
+        .data(graph.nodes);
+
+      // Bind the links
+      var name_to_g = {}
+      node.each(function(data, index, nodes) {
+        console.log(data.id)
+        name_to_g[data.id] = this;
+      });
+
+      function proc(w, t) {
+        return parseInt(w.getAttribute(t));
+      }
+      edge.attr("d", function(d) {
+        function lerp(t, a, b) {
+          return (1.0-t) * a + t * b;
+        }
+        var x1 = proc(name_to_g[d.source],"x") + node_width /2;
+        var y1 = proc(name_to_g[d.source],"y") + node_height;
+        var x2 = proc(name_to_g[d.target],"x") + node_width /2;
+        var y2 = proc(name_to_g[d.target],"y");
+        var s = "M " + x1 + " " + y1
+            + " C " + x1 + " " + lerp(.5, y1, y2)
+            + " " + x2 + " " + lerp(.5, y1, y2)
+            + " " + x2  + " " + y2
+      return s;
+    });
+
+  }
+  buildGraph()
+</script>
+</div><h2>Buffers</h2>
+<table><tr>
+<tr>
+<th>index</th><th>data</th></tr>
+<tr>
+<td>0</td><td>--</td>
+</tr>
+<tr>
+<td>1</td><td>--</td>
+</tr>
+<tr>
+<td>2</td><td>8 bytes</td>
+</tr>
+<tr>
+<td>3</td><td>40 bytes</td>
+</tr>
+<tr>
+<td>4</td><td>640 bytes</td>
+</tr>
+<tr>
+<td>5</td><td>256 bytes</td>
+</tr>
+<tr>
+<td>6</td><td>18432 bytes</td>
+</tr>
+<tr>
+<td>7</td><td>128 bytes</td>
+</tr>
+<tr>
+<td>8</td><td>4608 bytes</td>
+</tr>
+<tr>
+<td>9</td><td>64 bytes</td>
+</tr>
+<tr>
+<td>10</td><td>144 bytes</td>
+</tr>
+<tr>
+<td>11</td><td>--</td>
+</tr>
+<tr>
+<td>12</td><td>--</td>
+</tr>
+<tr>
+<td>13</td><td>--</td>
+</tr>
+<tr>
+<td>14</td><td>--</td>
+</tr>
+<tr>
+<td>15</td><td>--</td>
+</tr>
+<tr>
+<td>16</td><td>--</td>
+</tr>
+<tr>
+<td>17</td><td>--</td>
+</tr>
+<tr>
+<td>18</td><td>--</td>
+</tr>
+<tr>
+<td>19</td><td>--</td>
+</tr>
+<tr>
+<td>20</td><td>--</td>
+</tr>
+<tr>
+<td>21</td><td>16 bytes</td>
+</tr>
+<tr>
+<td>22</td><td>88 bytes</td>
+</tr>
+</table>
+<h2>Operator Codes</h2>
+<table><tr>
+<tr>
+<th>index</th><th>builtin_code</th><th>custom_code</th><th>version</th></tr>
+<tr>
+<td>0</td><td>CONV_2D</td>
+<td></td>
+<td>3</td>
+</tr>
+<tr>
+<td>1</td><td>MAX_POOL_2D</td>
+<td></td>
+<td>2</td>
+</tr>
+<tr>
+<td>2</td><td>MEAN</td>
+<td></td>
+<td>2</td>
+</tr>
+<tr>
+<td>3</td><td>FULLY_CONNECTED</td>
+<td></td>
+<td>4</td>
+</tr>
+<tr>
+<td>4</td><td>SOFTMAX</td>
+<td></td>
+<td>2</td>
+</tr>
+<tr>
+<td>5</td><td>DEQUANTIZE</td>
+<td></td>
+<td>2</td>
+</tr>
+</table>
+</body></html>

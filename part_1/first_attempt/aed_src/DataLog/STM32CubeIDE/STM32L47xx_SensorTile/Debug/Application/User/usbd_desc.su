@@ -1,0 +1,7 @@
+/home/pranay/iitd/sem7/col788/STSW-STLKT01_V2.5.0/Projects/SensorTile/Applications/DataLog/Src/usbd_desc.c:144:10:USBD_VCP_DeviceDescriptor	0	static
+/home/pranay/iitd/sem7/col788/STSW-STLKT01_V2.5.0/Projects/SensorTile/Applications/DataLog/Src/usbd_desc.c:156:10:USBD_VCP_LangIDStrDescriptor	0	static
+/home/pranay/iitd/sem7/col788/STSW-STLKT01_V2.5.0/Projects/SensorTile/Applications/DataLog/Src/usbd_desc.c:168:10:USBD_VCP_ProductStrDescriptor	8	static
+/home/pranay/iitd/sem7/col788/STSW-STLKT01_V2.5.0/Projects/SensorTile/Applications/DataLog/Src/usbd_desc.c:180:10:USBD_VCP_ManufacturerStrDescriptor	8	static
+/home/pranay/iitd/sem7/col788/STSW-STLKT01_V2.5.0/Projects/SensorTile/Applications/DataLog/Src/usbd_desc.c:208:10:USBD_VCP_ConfigStrDescriptor	8	static
+/home/pranay/iitd/sem7/col788/STSW-STLKT01_V2.5.0/Projects/SensorTile/Applications/DataLog/Src/usbd_desc.c:220:10:USBD_VCP_InterfaceStrDescriptor	8	static
+/home/pranay/iitd/sem7/col788/STSW-STLKT01_V2.5.0/Projects/SensorTile/Applications/DataLog/Src/usbd_desc.c:192:10:USBD_VCP_SerialStrDescriptor	0	static

@@ -1,0 +1,6 @@
+/home/pranay/iitd/sem7/col788/STSW-STLKT01_V2.5.0/Middlewares/Third_Party/FatFs/src/option/syscall.c:36:5:ff_cre_syncobj	16	static
+/home/pranay/iitd/sem7/col788/STSW-STLKT01_V2.5.0/Middlewares/Third_Party/FatFs/src/option/syscall.c:77:5:ff_del_syncobj	8	static
+/home/pranay/iitd/sem7/col788/STSW-STLKT01_V2.5.0/Middlewares/Third_Party/FatFs/src/option/syscall.c:98:5:ff_req_grant	8	static
+/home/pranay/iitd/sem7/col788/STSW-STLKT01_V2.5.0/Middlewares/Third_Party/FatFs/src/option/syscall.c:135:6:ff_rel_grant	0	static
+/home/pranay/iitd/sem7/col788/STSW-STLKT01_V2.5.0/Middlewares/Third_Party/FatFs/src/option/syscall.c:158:7:ff_memalloc	0	static
+/home/pranay/iitd/sem7/col788/STSW-STLKT01_V2.5.0/Middlewares/Third_Party/FatFs/src/option/syscall.c:170:6:ff_memfree	0	static

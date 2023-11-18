@@ -1,0 +1,10 @@
+/home/pranay/iitd/sem7/col788/STSW-STLKT01_V2.5.0/Projects/SensorTile/Applications/DataLog/Src/datalog_application.c:79:6:DATALOG_SD_Init	8	static
+/home/pranay/iitd/sem7/col788/STSW-STLKT01_V2.5.0/Projects/SensorTile/Applications/DataLog/Src/datalog_application.c:103:9:DATALOG_SD_Log_Enable	200	static
+/home/pranay/iitd/sem7/col788/STSW-STLKT01_V2.5.0/Projects/SensorTile/Applications/DataLog/Src/datalog_application.c:131:9:DATALOG_SD_writeBuf	16	static
+/home/pranay/iitd/sem7/col788/STSW-STLKT01_V2.5.0/Projects/SensorTile/Applications/DataLog/Src/datalog_application.c:148:6:DATALOG_SD_Log_Disable	8	static
+/home/pranay/iitd/sem7/col788/STSW-STLKT01_V2.5.0/Projects/SensorTile/Applications/DataLog/Src/datalog_application.c:156:6:DATALOG_SD_DeInit	0	static
+/home/pranay/iitd/sem7/col788/STSW-STLKT01_V2.5.0/Projects/SensorTile/Applications/DataLog/Src/datalog_application.c:166:6:DATALOG_SD_NewLine	16	static
+/home/pranay/iitd/sem7/col788/STSW-STLKT01_V2.5.0/Projects/SensorTile/Applications/DataLog/Src/datalog_application.c:173:9:getSensorsData	16	static
+/home/pranay/iitd/sem7/col788/STSW-STLKT01_V2.5.0/Projects/SensorTile/Applications/DataLog/Src/datalog_application.c:245:6:floatToInt	24	static
+/home/pranay/iitd/sem7/col788/STSW-STLKT01_V2.5.0/Projects/SensorTile/Applications/DataLog/Src/datalog_application.c:259:9:DoubleTap	8	static
+/home/pranay/iitd/sem7/col788/STSW-STLKT01_V2.5.0/Projects/SensorTile/Applications/DataLog/Src/datalog_application.c:271:6:MX_X_CUBE_MEMS1_Init	8	static

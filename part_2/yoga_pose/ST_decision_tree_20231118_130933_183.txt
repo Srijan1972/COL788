@@ -1,0 +1,109 @@
+F1_MEAN_on_ACC_X <= -0.703551
+|   F1_MEAN_on_ACC_X <= -0.828171
+|   |   F3_MEAN_on_ACC_Z <= 0.126401
+|   |   |   F1_MEAN_on_ACC_X <= -0.993164: StandingStill (92.0/23.0)
+|   |   |   F1_MEAN_on_ACC_X > -0.993164: StandingMoving (59.0/2.0)
+|   |   F3_MEAN_on_ACC_Z > 0.126401
+|   |   |   F1_MEAN_on_ACC_X <= -0.962891: Bridge (50.0/4.0)
+|   |   |   F1_MEAN_on_ACC_X > -0.962891: StandingMoving (9.0)
+|   F1_MEAN_on_ACC_X > -0.828171
+|   |   F3_MEAN_on_ACC_Z <= -0.636345: DownwardFacingDog (67.0)
+|   |   F3_MEAN_on_ACC_Z > -0.636345: TheExtendedSideAngle (60.0/1.0)
+F1_MEAN_on_ACC_X > -0.703551
+|   F3_MEAN_on_ACC_Z <= -0.794933
+|   |   F1_MEAN_on_ACC_X <= -0.0150614
+|   |   |   F2_MEAN_on_ACC_Y <= -0.121997: TheTree (48.0/4.0)
+|   |   |   F2_MEAN_on_ACC_Y > -0.121997
+|   |   |   |   F2_MEAN_on_ACC_Y <= 0.0273895: Plank (51.0)
+|   |   |   |   F2_MEAN_on_ACC_Y > 0.0273895: CobraPose (31.0)
+|   |   F1_MEAN_on_ACC_X > -0.0150614
+|   |   |   F2_MEAN_on_ACC_Y <= -0.106812: CobraPose (19.0)
+|   |   |   F2_MEAN_on_ACC_Y > -0.106812: ChildsPose (59.0)
+|   F3_MEAN_on_ACC_Z > -0.794933
+|   |   F3_MEAN_on_ACC_Z <= 0.62796
+|   |   |   F1_MEAN_on_ACC_X <= -0.307129: MeditationPose (59.0)
+|   |   |   F1_MEAN_on_ACC_X > -0.307129: BowPose (58.0)
+|   |   F3_MEAN_on_ACC_Z > 0.62796
+|   |   |   F3_MEAN_on_ACC_Z <= 0.956543
+|   |   |   |   F1_MEAN_on_ACC_X <= -0.314209: UpwardPlank (56.0)
+|   |   |   |   F1_MEAN_on_ACC_X > -0.314209: BoatPose (39.0)
+|   |   |   F3_MEAN_on_ACC_Z > 0.956543: SeatedForwardBend (57.0)
+
+Number of Leaves  : 	16
+Size of the tree : 	31
+
+
+class:
+ => BoatPose, UpwardPlank, BowPose, TheTree, Bridge, TheExtendedSideAngle, ChildsPose, StandingStill, CobraPose, StandingMoving, DownwardFacingDog, SeatedForwardBend, MeditationPose, Plank, 
+features:
+ => F1_MEAN_on_ACC_X, F2_MEAN_on_ACC_Y, F3_MEAN_on_ACC_Z, 
+
+
+Mean absolute error	0.963464
+Root mean squared error	0.963507
+ ======= Whole data training with Confidence Factor: 0.9 ========= 
+
+
+===== Confusion Matrix =====
+         	BoatPose 	UpwardPl	BowPose  	TheTree  	Bridge   	TheExten	ChildsPo	Standing	CobraPose	Standing	Downward	SeatedFo	Meditati	Plank    	<-- classified as
+BoatPose 	39	0	0	0	0	0	0	0	0	0	0	0	0	0	
+UpwardPl	0	56	0	0	0	0	0	0	0	0	0	0	0	0	
+BowPose  	0	0	58	0	0	0	0	0	0	0	0	0	0	0	
+TheTree  	0	0	0	48	0	0	0	0	0	0	0	0	0	0	
+Bridge   	0	0	0	0	50	0	0	0	0	0	0	0	0	0	
+TheExten	0	0	0	0	0	60	0	0	0	0	0	0	0	0	
+ChildsPo	0	0	0	0	0	0	59	0	0	0	0	0	0	0	
+Standing	0	0	0	0	0	0	0	92	0	2	0	0	0	0	
+CobraPose	0	0	0	0	0	0	0	0	54	0	0	0	0	0	
+Standing	0	0	0	0	0	0	0	3	0	93	0	0	0	0	
+Downward	0	0	0	0	0	0	0	0	0	0	67	0	0	0	
+SeatedFo	0	0	0	0	0	0	0	0	0	0	0	57	0	0	
+Meditati	0	0	0	0	0	0	0	0	0	0	0	0	59	0	
+Plank    	0	0	0	0	0	0	0	0	0	0	0	0	0	51	
+
+Total Number of Instances        : 848
+Correctly Classified Instances   : 843
+Incorrectly Classified Instances : 5
+Kappa Statistic: 0.0760558
+Accuracy: 99.4104%
+
+Report  :	precision	recall	support	
+BoatPose 	1    	1	 39
+UpwardPl	1    	1	 56
+BowPose  	1    	1	 58
+TheTree  	1    	1	 48
+Bridge   	1    	1	 50
+TheExten	1    	1	 60
+ChildsPo	1    	1	 59
+Standing	0.979    	0.968	 94
+CobraPose	1    	1	 54
+Standing	0.969    	0.979	 96
+Downward	1    	1	 67
+SeatedFo	1    	1	 57
+Meditati	1    	1	 59
+Plank    	1    	1	 51
+
+avg/total	0.994    	0.994	 848
+The current number of nodes: 23 is greater than the maximum number of nodes: 15.
+The class and its number of leaves: { Plank:1, BoatPose:1, TheTree:1, DownwardFacingDog:1, UpwardPlank:1, Bridge:1, SeatedForwardBend:1, ChildsPose:1, StandingStill:1, CobraPose:3, StandingMoving:9, BowPose:1, TheExtendedSideAngle:1, MeditationPose:1, }
+Pruning ... 
+Current Result-> Number of Nodes: 22; Number of leaves: 23
+Pruning ... 
+Current Result-> Number of Nodes: 21; Number of leaves: 22
+Pruning ... 
+Current Result-> Number of Nodes: 20; Number of leaves: 21
+Pruning ... 
+Current Result-> Number of Nodes: 19; Number of leaves: 20
+Pruning ... 
+Current Result-> Number of Nodes: 18; Number of leaves: 19
+Pruning ... 
+Current Result-> Number of Nodes: 17; Number of leaves: 18
+Pruning ... 
+Current Result-> Number of Nodes: 16; Number of leaves: 17
+Pruning ... 
+
+The total error sample cause by pruning has more than 5% of total sample number.
+Further Pruning will reduce the accuracy significantly.
+Current Node:16
+
+Current Result-> Number of Nodes: 15; Number of leaves: 16
